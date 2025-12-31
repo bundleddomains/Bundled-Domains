@@ -62,38 +62,57 @@ Domain bundles available for purchase are listed below.
 <br><br><br>
 
 <div style="font-size:22px;">
-  <p><strong>Email Inquiry:</strong></p>
+  <p><strong>Email Inquiry</strong></p>
 
-  <form onsubmit="return confirm('Please double-check your email address for typos before sending.');">
-    <input
-      type="email"
-      placeholder="your@email.com"
-      style="
-        font-size:22px;
-        padding:16px 18px;
-        width:420px;
-        height:60px;
-        border:3px solid #000;
-        text-align:center;
-        margin-bottom:16px;
-      "
-      required
-    >
-    <br>
-    <button
-      type="submit"
-      style="
-        font-size:22px;
-        padding:12px 36px;
-        border:3px solid #000;
-        background:#fff;
-        cursor:pointer;
-      "
-    >
-      Send
-    </button>
-  </form>
+  <input
+    id="emailInput"
+    type="email"
+    placeholder="your@email.com"
+    style="
+      font-size:20px;
+      padding:14px;
+      width:360px;
+      height:50px;
+      border:3px solid #000;
+      text-align:center;
+    "
+  >
+
+  <br><br>
+
+  <button
+    onclick="confirmEmail()"
+    style="
+      font-size:20px;
+      padding:12px 28px;
+      border:3px solid #000;
+      background:#fff;
+      cursor:pointer;
+    "
+  >
+    Send Inquiry
+  </button>
 </div>
+
+<script>
+function confirmEmail() {
+  const email = document.getElementById('emailInput').value;
+
+  if (!email) {
+    alert('Please enter an email address.');
+    return;
+  }
+
+  const ok = confirm(
+    'Please double-check your email for typos:\n\n' + email
+  );
+
+  if (ok) {
+    alert('Inquiry noted. You may be contacted via email.');
+    document.getElementById('emailInput').value = '';
+  }
+}
+</script>
 
 </body>
 </html>
