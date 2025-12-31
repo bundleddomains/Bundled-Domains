@@ -10,26 +10,7 @@
   font-family: Arial, sans-serif;
   font-size:26px;
   margin-top:40px;
-  background:#fff;
-  position:relative;
-  overflow-x:hidden;
 ">
-
-<!-- Background Image Accent -->
-<div
-  style="
-    position:fixed;
-    top:40px;
-    right:-120px;
-    width:520px;
-    height:520px;
-    background:url('IMG_1473.jpeg') no-repeat center;
-    background-size:contain;
-    opacity:0.12;
-    pointer-events:none;
-    z-index:-1;
-  "
-></div>
 
 <p>
 Thank you for visiting www.bundled.domains.<br>
@@ -80,38 +61,60 @@ Domain bundles available for purchase are listed below.
 
 <br><br><br>
 
-<div style="font-size:22px;">
-  <p><strong>Email Inquiry</strong></p>
-  <p style="font-size:18px; margin-top:4px;">All inquiries are welcome.</p>
+<!-- Logo + Email Inquiry Row -->
+<div style="
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+">
 
-  <input
-    id="emailInput"
-    type="email"
-    placeholder="Include your email for a response"
+  <!-- Logo -->
+  <img
+    src="IMG_1473.jpeg"
+    alt="bundled.domains logo"
     style="
-      font-size:20px;
-      padding:14px;
-      width:360px;
-      height:56px;
-      border:3px solid #000;
-      text-align:center;
+      width:220px;
+      max-width:80%;
     "
   >
 
-  <br><br>
+  <!-- Email Inquiry -->
+  <div style="font-size:22px; text-align:center;">
+    <p><strong>Email Inquiry</strong></p>
+    <p style="font-size:18px; margin-top:4px;">All inquiries are welcome.</p>
 
-  <button
-    onclick="confirmEmail()"
-    style="
-      font-size:20px;
-      padding:12px 28px;
-      border:3px solid #000;
-      background:#fff;
-      cursor:pointer;
-    "
-  >
-    Send
-  </button>
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Include your email for a response"
+      style="
+        font-size:20px;
+        padding:14px;
+        width:360px;
+        height:56px;
+        border:3px solid #000;
+        text-align:center;
+      "
+    >
+
+    <br><br>
+
+    <button
+      onclick="confirmEmail()"
+      style="
+        font-size:20px;
+        padding:12px 28px;
+        border:3px solid #000;
+        background:#fff;
+        cursor:pointer;
+      "
+    >
+      Send
+    </button>
+  </div>
+
 </div>
 
 <script>
