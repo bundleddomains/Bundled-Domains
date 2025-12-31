@@ -61,6 +61,7 @@ Domain bundles available for purchase are listed below.
 
 <br><br><br>
 
+<!-- Email Inquiry -->
 <div style="font-size:22px;">
   <p><strong>Email Inquiry</strong></p>
 
@@ -72,7 +73,7 @@ Domain bundles available for purchase are listed below.
       font-size:20px;
       padding:14px;
       width:360px;
-      height:50px;
+      height:56px;
       border:3px solid #000;
       text-align:center;
     "
@@ -90,7 +91,7 @@ Domain bundles available for purchase are listed below.
       cursor:pointer;
     "
   >
-    Send Inquiry
+    Send
   </button>
 </div>
 
@@ -99,17 +100,17 @@ function confirmEmail() {
   const email = document.getElementById('emailInput').value;
 
   if (!email) {
-    alert('Please enter an email address.');
+    alert("Please enter your email address.");
     return;
   }
 
-  const ok = confirm(
-    'Please double-check your email for typos:\n\n' + email
+  const confirmCheck = confirm(
+    "Please double-check your email for typos before sending:\n\n" + email
   );
 
-  if (ok) {
-    alert('Inquiry noted. You may be contacted via email.');
-    document.getElementById('emailInput').value = '';
+  if (confirmCheck) {
+    alert("Thank you. Your inquiry has been noted.");
+    document.getElementById('emailInput').value = "";
   }
 }
 </script>
